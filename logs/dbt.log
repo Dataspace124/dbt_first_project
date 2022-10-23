@@ -1,0 +1,29 @@
+
+
+============================== 2022-10-23 16:07:22.906036 | 504b8b03-3996-4f77-8417-59e4d8ca5c24 ==============================
+[0m16:07:22.906036 [info ] [MainThread]: Running with dbt=1.2.2
+[0m16:07:22.906036 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\dell\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dbt_demo', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:07:22.911118 [debug] [MainThread]: Tracking: tracking
+[0m16:07:22.927833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020092238A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020092209090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002009220AEF0>]}
+[0m16:07:22.935838 [debug] [MainThread]: Starter project path: C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m16:07:43.393888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200922093F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200922090C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200922081F0>]}
+[0m16:07:43.393888 [debug] [MainThread]: Flushing usage events
+[0m16:07:44.313923 [error] [MainThread]: Encountered an error:
+
+[0m16:07:44.323053 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 129, in main
+    results, succeeded = handle_and_check(args)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 191, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 238, in run_from_args
+    results = task.run()
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 325, in run
+    adapter = self.ask_for_adapter_choice()
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 255, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
